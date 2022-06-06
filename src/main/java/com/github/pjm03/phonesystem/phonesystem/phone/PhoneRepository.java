@@ -7,5 +7,6 @@ import java.util.Optional;
 
 public interface PhoneRepository extends JpaRepository<Phone, Integer> {
     Phone save(Phone phone);
+    Optional<Phone> findByPhoneNumber(String phoneNumber);
     List<Phone> findByOwner(String owner);
 }
